@@ -16,8 +16,10 @@ This is a fully responsive solution to the [Recipe page challenge on Frontend Me
 
 ### Screenshot
 
-![](./design/desktop-result.png.png)
-![](./design/mobile-result.png.png)
+Desktop result:
+![Desktop result image](./design/desktop-result.png)
+Mobile result:
+![Mobile result image](./design/mobile-result.png)
 
 ### Links
 
