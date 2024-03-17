@@ -1,0 +1,241 @@
+/** Universal styles **/
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: 400 700;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+img, hr {
+    width: 100%;
+}
+
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(31, 53%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(32, 10%, 34%);
+    --dark-charcoal: hsl(15, 4%, 18%);
+    --prep-time-background: hsl(322, 100%, 98%);
+}
+
+@media only screen and (width > 2000px) {
+    :root {
+        font-size: 32px;
+    }
+}
+
+body {
+    display: grid;
+    margin: 6rem 0 2.5rem;
+    justify-content: center;
+    background-color: var(--eggshell);
+    font-family: 'Outfit', sans-serif;
+}
+
+@media only screen and (width < 775px) {
+    body {
+        margin: 0 0 2.5rem;
+    }
+}
+
+/** Recipe card **/
+
+.card {
+    max-width: 700px;
+}
+
+@media only screen and (width > 2000px) {
+    .card {
+        max-width: 1400px;
+    }
+}
+
+.container {
+    padding: 2.5rem 2.5rem 0.25rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+}
+
+section {
+    margin: 1.6rem 0;
+}
+
+@media only screen and (width < 775px) {
+    .card {
+        max-width: 100%;
+    }
+    .container {
+        padding: 0;
+        border-radius: 0;
+        padding-bottom: 0.25rem;
+    }
+    main {
+        padding: 0 2.5rem;
+    }
+}
+
+/* Headings, images and horizontal rules */
+
+hr {
+    opacity: 40%;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+@media only screen and (width < 775px) {
+    img {
+        border-radius: 0;
+    }
+}
+
+h1, h2 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.35rem;
+    color: var(--dark-charcoal);
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: var(--nutmeg);
+}
+
+/* List styles */
+
+ul, ol {
+    list-style-type: none;
+}
+
+ol {
+    counter-increment: count 0;
+}
+
+p, li, th {
+    color: var(--wenge-brown);
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+ 
+p {
+    margin: 0.6rem 0;
+    line-height: 1.4rem;
+}
+
+li {
+    margin: 0.6rem 0;
+    margin-left: 0.5rem;
+}
+
+ul > li, ol > li {
+    text-indent: -2.25rem;
+    padding-left: 2.25rem;
+}
+
+ul > li {
+    line-height: 1.2rem;
+}
+
+ol > li {
+    counter-increment: count 1;
+    line-height: 1.4rem;
+}
+
+li::before {
+    color: var(--nutmeg);
+}
+
+ul > li::before {
+    padding-right: 1.5rem;
+    font-size: 1.4rem;
+    content: '\2022';
+}
+
+ol > li::before {
+    padding-right: 1.3rem;
+    content: counter(count, decimal) '.';
+    font-weight: 700;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    padding: 0.75rem 0;
+    padding-left: 1.75rem;
+}
+
+td {
+    color: var(--nutmeg);
+}
+
+.bordered {
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.4);
+}
+
+/* Preparation time section */
+
+.prep-time {
+    padding: 1.8rem;
+    background-color: var(--prep-time-background);
+    border-radius: 1rem;
+}
+
+.prep-time h2 {
+    font-size: 1.25rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--dark-raspberry);
+}
+
+.prep-time li::before {
+    color: var(--dark-raspberry);
+}
+
+/** Attribution **/
+
+.attribution {
+    margin: 2rem 3rem 0;
+    padding: 0.5rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-raspberry);
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
